@@ -8,5 +8,5 @@ if initial.to_i % 4 == 0 && num.to_i % 400 == 0)
 leap << num
 num += 1
 end 
-puts leap
+leap
 end
