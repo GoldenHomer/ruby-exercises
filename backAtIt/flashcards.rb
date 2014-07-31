@@ -33,9 +33,13 @@ class Deck
 		@cards = []
 	end
 
-	def add_card card
+	def << card
 		@cards << card
 	end
+
+	def shuffle
+		@cards.shuffle!
+		# Remember that a method with ! appended overrides rather than create a copy.
 end
 
 card1 = Card.new("cat","neko")
@@ -43,8 +47,10 @@ card2 = Card.new("dog","inu")
 
 deck = Deck.new("Japanese")
 
-deck.add_card card1
-deck.add_card card2
+deck << card1
+deck << card2
+
+
 
 deck.cards.each do |card|
 	front = card.front
